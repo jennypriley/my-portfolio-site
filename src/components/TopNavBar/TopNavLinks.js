@@ -40,22 +40,4 @@ const TopNavLinkStyles = styled(Link)`
   }
 `
 
-// const ActiveLinkStyles = styled.div`
-//   cursor: default;
-// `
-
-// const LinkStyles = styled.div`
-//   color: ${siteColors.white};
-//   cursor: pointer;
-//   :hover:nth-child(1) {
-//     color: ${siteColors.violet};
-//   }
-//   :hover:nth-child(2) {
-//     color: ${siteColors.orange};
-//   }
-//   :hover:nth-child(3) {
-//     color: ${siteColors.green};
-//   }
-// `
-
 export default TopNavLinks

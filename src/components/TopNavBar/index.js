@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import TopNavLinks from "./TopNavLinks"
 import siteColors from "../../styles/colors"
+// TODO
 // import LinkedinLogo from "./LinkedinLogo"
 // import DribbbleLogo from "./DribbbleLogo"
 // import GithubLogo from "./GithubLogo"
@@ -13,13 +14,13 @@ function TopNavBar(props) {
       <TopNavBarStyles>
         <SiteLogoWrapperStyles>
           <Link to="https://www.linkedin.com/in/jril/">
-            <SiteLogoStyles>{/* <LinkedinLogo /> */}</SiteLogoStyles>
+            <SiteLogoStyles>{/*TODO <LinkedinLogo /> */}</SiteLogoStyles>
           </Link>
           <Link to="https://dribbble.com/jennril">
-            <SiteLogoStyles>{/* <DribbbleLogo /> */}</SiteLogoStyles>
+            <SiteLogoStyles>{/*TODO <DribbbleLogo /> */}</SiteLogoStyles>
           </Link>
           <Link to="https://github.com/jennypriley">
-            <SiteLogoStyles>{/* <GithubLogo /> */}</SiteLogoStyles>
+            <SiteLogoStyles>{/*TODO <GithubLogo /> */}</SiteLogoStyles>
           </Link>
         </SiteLogoWrapperStyles>
         <TopNavLinkWrapperStyles>
