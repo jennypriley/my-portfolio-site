@@ -2,28 +2,12 @@ import React from "react"
 import styled from "styled-components"
 import TopNavLinks from "./TopNavLinks"
 import siteColors from "../../styles/colors"
-// TODO
-// import LinkedinLogo from "./LinkedinLogo"
-// import DribbbleLogo from "./DribbbleLogo"
-// import GithubLogo from "./GithubLogo"
-import { Link } from "gatsby"
 
 function TopNavBar(props) {
   return (
-    <TopNavWrapperStyles>
-      <TopNavBarStyles>
-        <SiteLogoWrapperStyles>
-          <Link to="https://www.linkedin.com/in/jril/">
-            <SiteLogoStyles>{/*TODO <LinkedinLogo /> */}</SiteLogoStyles>
-          </Link>
-          <Link to="https://dribbble.com/jennril">
-            <SiteLogoStyles>{/*TODO <DribbbleLogo /> */}</SiteLogoStyles>
-          </Link>
-          <Link to="https://github.com/jennypriley">
-            <SiteLogoStyles>{/*TODO <GithubLogo /> */}</SiteLogoStyles>
-          </Link>
-        </SiteLogoWrapperStyles>
-        <TopNavLinkWrapperStyles>
+    <TopNavBottomBorder>
+      <TopNavBoundaries>
+        <TopNavLinkHoverColors>
           <TopNavLinks
             name="Portfolio"
             path=""
@@ -42,32 +26,23 @@ function TopNavBar(props) {
             currentPath={props.pathName}
             interactionColor={siteColors.green}
           />
-        </TopNavLinkWrapperStyles>
-      </TopNavBarStyles>
-    </TopNavWrapperStyles>
+        </TopNavLinkHoverColors>
+      </TopNavBoundaries>
+    </TopNavBottomBorder>
   )
 }
 
-const TopNavBarStyles = styled.div`
+const TopNavBoundaries = styled.div`
   display: inline-block;
   margin: 2em 0em 0em 10em;
   max-width: 100%;
 `
 
-const TopNavWrapperStyles = styled.div`
+const TopNavBottomBorder = styled.div`
   border-bottom: solid 0.5em ${siteColors.white};
 `
 
-const SiteLogoWrapperStyles = styled.div`
-  display: block;
-  margin-right: 15em;
-`
-
-const SiteLogoStyles = styled.div`
-  padding-right: 3em;
-`
-
-const TopNavLinkWrapperStyles = styled.div`
+const TopNavLinkHoverColors = styled.div`
   display: inline-flex;
   div:nth-child(1) {
     color: ${siteColors.violet};
