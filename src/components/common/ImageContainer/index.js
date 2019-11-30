@@ -7,11 +7,11 @@ function ImageContainer({ children }) {
 }
 
 const ImageWrapper = styled.div`
-  height: 100px;
-  width: 100px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: ${white};
+  height: 12em;
+  width: 18em;
+  border: solid 0.1em ${white};
+  border-radius: 0.25em;
+  margin: 0em 0em 3em 2em;
 `
 
 export default ImageContainer
