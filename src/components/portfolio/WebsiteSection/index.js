@@ -17,7 +17,7 @@ function WebsiteSection(props) {
       <ImageContainer />
       <SubsectionHeader>Battlerounds</SubsectionHeader>
       <Description>
-        Battlerounds is a Warhammer 40k tournament tracking site. It allows
+        Battlerounds is a Warhammer 40K tournament tracking site. It allows
         players to keep track of events, statistics, and tournament matches.
       </Description>
       <ImageContainer />
