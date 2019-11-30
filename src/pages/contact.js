@@ -1,27 +1,22 @@
 import React from "react"
-import styled from "styled-components"
 import TopNavBar from "../components/TopNavBar"
+import SectionHeader from "../components/common/SectionHeader"
+import Description from "../components/common/Description"
+import Button from "../components/common/Button"
 
-const Contacts = props => (
+const Contacts = ({ path }) => (
   <div>
-    <TopNavBar pathName={props.path} />
-    <LandingText>
-      <p>Hey there.</p>
-      <p>
-        I’m Jenny, a web/app and graphic designer located in Arizona. I envision
-        web applications and marketing material that bring clients’ business
-        identities to life. And, yes, I <i>do</i> code!
-      </p>
-    </LandingText>
+    <TopNavBar pathName={path} />
+    <SectionHeader>Contact</SectionHeader>
+    <Description>
+      Have any questions or a job opportunity you would like to discuss?
+    </Description>
+    <Button
+      onClick={() => window.location.assign("mailto:jenny.p.riley@gmail.com")}
+    >
+      Email Me!
+    </Button>
   </div>
 )
-
-const LandingText = styled.div`
-  font-family: Lato;
-  font-weight: 300;
-  display: inline-block;
-  margin: 3em 0em 0em 10em;
-  width: 32em;
-`
 
 export default Contacts
