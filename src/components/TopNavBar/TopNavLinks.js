@@ -20,7 +20,6 @@ const TopNavLinks = ({ path, name, interactionColor, currentPath }) => {
 }
 
 const TopNavLinkStyles = styled(Link)`
-  justify-content: right;
   margin-right: 2em;
   text-transform: uppercase;
   font-family: Lato;
@@ -30,7 +29,7 @@ const TopNavLinkStyles = styled(Link)`
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  padding-bottom: 0.5em;
+  padding-bottom: 1em;
   margin-bottom: -0.35em;
   cursor: pointer;
   &:hover {
