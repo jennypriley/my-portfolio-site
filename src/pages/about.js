@@ -48,7 +48,7 @@ const Column = styled(Row)`
 `
 
 const AboutDescription = styled(Description)`
-  margin-top: -1em;
+  margin-top: -0.5em;
   margin-left: 0em;
 `
 

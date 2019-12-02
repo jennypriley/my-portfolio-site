@@ -11,8 +11,12 @@ const TopNavLinks = ({ path, name, interactionColor, currentPath }) => {
         borderColor: interactionColor,
       }}
       interactioncolor={interactionColor}
-      isactive={path.concat("/") === currentPath ? "true" : undefined}
-      disabled={path.concat("/") === currentPath}
+      isactive={
+        path.concat("/") === currentPath || path === currentPath
+          ? "true"
+          : undefined
+      }
+      disabled={path.concat("/") === currentPath || path === currentPath}
     >
       {name}
     </TopNavLinkStyles>
