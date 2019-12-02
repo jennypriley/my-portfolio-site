@@ -14,9 +14,6 @@ const GlobalStyle = createGlobalStyle`
       display: none;
     }
   }
-  p {
-    margin-block-start: 0;
-  }
   a {
     text-decoration: none;
     -o-transition: 0.2s;

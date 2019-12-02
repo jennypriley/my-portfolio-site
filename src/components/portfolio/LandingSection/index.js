@@ -32,19 +32,17 @@ function LandingSection() {
         </DownArrowAnimation>
       </DownArrowPositioning>
       <Description>
-        <p>
-          <WaveLine>
-            Hey there.
-            <WaveAnimation>
-              <WaveIcon />
-            </WaveAnimation>
-          </WaveLine>
-        </p>
-        <p>
+        <WaveLine>
+          Hey there.
+          <WaveAnimation>
+            <WaveIcon />
+          </WaveAnimation>
+        </WaveLine>
+        <BlurbPart>
           I’m Jenny, a web and graphic designer located in Arizona. I envision
           web applications and marketing material that bring clients’ business
           identities to life. And, yes, I <i>do</i> code!
-        </p>
+        </BlurbPart>
       </Description>
     </SectionHeight>
   )
@@ -52,6 +50,11 @@ function LandingSection() {
 
 const SectionHeight = styled.div`
   height: 100vh;
+`
+
+const BlurbPart = styled.div`
+  display: block;
+  margin-block-start: 1em;
 `
 
 const SilhouettePositioning = styled.div`
