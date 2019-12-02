@@ -8,12 +8,12 @@ import DribbbleIcon from "../../styles/svg/DribbbleIcon"
 
 function TopNavBar(props) {
   return (
-    <div>
+    <StickyNav>
       <TopNavBoundaries>
         <TopNavLinkHoverColors>
           <TopNavLinks
             name="Portfolio"
-            path=""
+            path="/"
             currentPath={props.pathName}
             interactionColor={siteColors.violet}
           />
@@ -61,9 +61,17 @@ function TopNavBar(props) {
         </SocialIcons>
       </TopNavBoundaries>
       <TopNavBottomBorder />
-    </div>
+    </StickyNav>
   )
 }
+
+const StickyNav = styled.div`
+  display: block;
+  position: sticky;
+  background-color: ${siteColors.black};
+  top: 0;
+  z-index: 100;
+`
 
 const TopNavBoundaries = styled.div`
   display: flex;

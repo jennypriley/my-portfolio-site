@@ -8,6 +8,14 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${siteColors.black};
     color: ${siteColors.white};
     line-height: 1.4;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  p {
+    margin-block-start: 0;
   }
   a {
     text-decoration: none;

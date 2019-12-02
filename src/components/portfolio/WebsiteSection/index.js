@@ -8,7 +8,7 @@ import Row from "../../common/Row"
 
 function WebsiteSection(props) {
   return (
-    <div>
+    <SectionHeight>
       <SectionHeader>Websites</SectionHeader>
       <SubsectionHeader>TikiCyborg Technical, LLC.</SubsectionHeader>
       <WebsiteDescription>
@@ -27,9 +27,14 @@ function WebsiteSection(props) {
       <Row>
         <ImageContainer />
       </Row>
-    </div>
+    </SectionHeight>
   )
 }
+
+const SectionHeight = styled.div`
+  height: 100vh;
+  margin-top: 3em;
+`
 
 const WebsiteDescription = styled(Description)`
   margin-top: 0em;

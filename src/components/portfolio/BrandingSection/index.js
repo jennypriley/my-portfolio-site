@@ -8,7 +8,7 @@ import Row from "../../common/Row"
 
 function BrandingSection() {
   return (
-    <div>
+    <SectionHeight>
       <SectionHeader>Illustrations / Branding</SectionHeader>
       <SubsectionHeader>Professional Work</SubsectionHeader>
       <BrandingDescription>
@@ -24,9 +24,14 @@ function BrandingSection() {
       <Row>
         <ImageContainer />
       </Row>
-    </div>
+    </SectionHeight>
   )
 }
+
+const SectionHeight = styled.div`
+  height: 100vh;
+  margin-top: 3em;
+`
 
 const BrandingDescription = styled(Description)`
   margin-top: 0em;
