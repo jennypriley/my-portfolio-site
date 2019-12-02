@@ -67,6 +67,7 @@ const SilhouettePositioning = styled.div`
 `
 
 const ScrollText = styled.div`
+  cursor: default;
   font-family: Lato;
   font-weight: 300;
   margin-left: 10em;
