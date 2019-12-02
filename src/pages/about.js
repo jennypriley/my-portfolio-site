@@ -1,15 +1,26 @@
 import React from "react"
 import styled from "styled-components"
+import { green } from "../styles/colors"
+
 import TopNavBar from "../components/TopNavBar"
 import Row from "../components/common/Row"
 import SectionHeader from "../components/common/SectionHeader"
 import Description from "../components/common/Description"
 import ImageContainer from "../components/common/ImageContainer"
-import { green } from "../styles/colors"
+import PaintBrush from "../styles/svg/PaintBrush"
 
 const About = ({ path }) => (
   <div>
     <TopNavBar pathName={path} />
+    <PaintBrushPositioning>
+      <PaintBrush
+        style={{
+          height: "80vh",
+          display: "flex",
+          margin: "11.5em 10em 0em auto",
+        }}
+      />
+    </PaintBrushPositioning>
     <AboutHeader>About</AboutHeader>
     <Row>
       <PhotoContainer />
@@ -31,6 +42,15 @@ const About = ({ path }) => (
     </Row>
   </div>
 )
+
+const PaintBrushPositioning = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -100;
+`
 
 const AboutHeader = styled(SectionHeader)`
   margin-top: 3em;
