@@ -3,8 +3,8 @@ import { white } from "../../../styles/colors"
 
 export default styled.div`
   display: inline-block;
-  max-height: 5em;
-  min-width: 7.6em;
+  max-height: auto;
+  min-width: auto;
   border: solid 0.1em ${white};
   border-radius: 0.25em;
   margin: 0em 0em 3em 2em;
