@@ -1,27 +1,54 @@
 import React from "react"
 import styled from "styled-components"
-import TopNavBar from "../components/TopNavBar"
+import { orange } from "../styles/colors"
 
-const Contacts = props => (
+import TopNavBar from "../components/TopNavBar"
+import SectionHeader from "../components/common/SectionHeader"
+import Description from "../components/common/Description"
+import Button from "../components/common/Button"
+import Envelope from "../styles/svg/Envelope"
+
+const Contacts = ({ path }) => (
   <div>
-    <TopNavBar pathName={props.path} />
-    <LandingText>
-      <p>Hey there.</p>
-      <p>
-        I’m Jenny, a web/app and graphic designer located in Arizona. I envision
-        web applications and marketing material that bring clients’ business
-        identities to life. And, yes, I <i>do</i> code!
-      </p>
-    </LandingText>
+    <TopNavBar pathName={path} />
+    <EnvelopePositioning>
+      <Envelope
+        style={{
+          height: "65vh",
+          display: "flex",
+          margin: "11.5em 0em 5em auto",
+        }}
+      />
+    </EnvelopePositioning>
+    <ContactHeader>Contact</ContactHeader>
+    <ContactDescription>
+      Have any questions or a job opportunity you would like to discuss?
+    </ContactDescription>
+    <br />
+    <Button
+      onClick={() => window.location.assign("mailto:jenny.p.riley@gmail.com")}
+    >
+      Email Me!
+    </Button>
   </div>
 )
 
-const LandingText = styled.div`
-  font-family: Lato;
-  font-weight: 300;
-  display: inline-block;
-  margin: 3em 0em 0em 10em;
-  width: 32em;
+const EnvelopePositioning = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -100;
+`
+
+const ContactHeader = styled(SectionHeader)`
+  margin-top: 3em;
+  border-color: ${orange};
+`
+
+const ContactDescription = styled(Description)`
+  margin-top: 0em;
 `
 
 export default Contacts
