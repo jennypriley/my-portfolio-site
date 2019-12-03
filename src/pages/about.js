@@ -1,12 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import { green } from "../styles/colors"
+import { green, white } from "../styles/colors"
 
 import TopNavBar from "../components/TopNavBar"
 import Row from "../components/common/Row"
 import SectionHeader from "../components/common/SectionHeader"
 import Description from "../components/common/Description"
-import ImageContainer from "../components/common/ImageContainer"
 import PaintBrush from "../styles/svg/PaintBrush"
 
 const About = ({ path }) => (
@@ -23,20 +22,25 @@ const About = ({ path }) => (
     </PaintBrushPositioning>
     <AboutHeader>About</AboutHeader>
     <Row>
-      <PhotoContainer />
+      <PhotoContainer>
+        <img
+          src="https://myportfoliositeimages.s3-us-west-1.amazonaws.com/headshot.png"
+          style={{ height: "18.1em", width: "12.1em", verticalAlign: "bottom" }}
+        />
+      </PhotoContainer>
       <Column>
         <AboutDescription>
-          <p>
+          <BlurbPart>
             I am a humor-loving gamer with a background in the arts. In my spare
             time, I love to play video games, draw, paint miniatures, or dabble
             in creative hobbies. I'm also an animal lover and like to spend time
             snuggling and playing with my two cats.
-          </p>
-          <p>
+          </BlurbPart>
+          <BlurbPart>
             When I'm not at home, I'm usually hanging out with my boyfriend and
             friends or out enjoying nature while hiking or at a whildlife
             preserve.
-          </p>
+          </BlurbPart>
         </AboutDescription>
       </Column>
     </Row>
@@ -57,9 +61,19 @@ const AboutHeader = styled(SectionHeader)`
   border-color: ${green};
 `
 
-const PhotoContainer = styled(ImageContainer)`
-  width: 12em;
-  height: 18em;
+const PhotoContainer = styled.div`
+  min-width: auto;
+  min-height: auto;
+  display: inline-block;
+  border: solid 0.1em ${white};
+  border-radius: 0.25em;
+  margin: 0em 0em 3em 2em;
+`
+
+const BlurbPart = styled.div`
+  display: block;
+  margin-block-start: 0.1em;
+  margin-block-end: 1em;
 `
 
 const Column = styled(Row)`
