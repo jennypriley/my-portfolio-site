@@ -15,7 +15,7 @@ const scroller = Scroll.scroller
 function Landing({ path }) {
   const [section, setSection] = useState(0)
   const debouncedSection = useDebounce(section, 300)
-  const sitePage = window !== defined ? window : Element
+  const sitePage = window !== undefined ? window : Element
   useEventListender(
     "wheel",
     event => {
