@@ -1,5 +1,5 @@
 {
-  "name": "Portfolio of Jenny Riley",
+  "name": "jenny-riley-portfolio",
   "private": true,
   "description": "UI/UX Designer & Frontend Developer",
   "version": "0.1.0",
@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/jennypriley/my-portfolio-site"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
