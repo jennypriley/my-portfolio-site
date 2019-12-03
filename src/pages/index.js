@@ -15,25 +15,32 @@ const scroller = Scroll.scroller
 function Landing({ path }) {
   const [section, setSection] = useState(0)
   const debouncedSection = useDebounce(section, 300)
-
-  useEventListender("wheel", event => {
-    if (event.wheelDeltaY > 0 && debouncedSection > 0) {
-      setSection(debouncedSection - 1)
-    } else if (event.wheelDeltaY < 0 && debouncedSection < 2) {
-      setSection(debouncedSection + 1)
-    }
-  })
-  useEventListender("keydown", event => {
-    event.preventDefault()
-    if (event.keyCode === 38 && debouncedSection > 0) {
-      setSection(debouncedSection - 1)
-    } else if (
-      (event.keyCode === 40 || event.keyCode === 32) &&
-      debouncedSection < 2
-    ) {
-      setSection(debouncedSection + 1)
-    }
-  })
+  useEventListender(
+    "wheel",
+    event => {
+      if (event.wheelDeltaY > 0 && debouncedSection > 0) {
+        setSection(debouncedSection - 1)
+      } else if (event.wheelDeltaY < 0 && debouncedSection < 2) {
+        setSection(debouncedSection + 1)
+      }
+    },
+    window || Element
+  )
+  useEventListender(
+    "keydown",
+    event => {
+      event.preventDefault()
+      if (event.keyCode === 38 && debouncedSection > 0) {
+        setSection(debouncedSection - 1)
+      } else if (
+        (event.keyCode === 40 || event.keyCode === 32) &&
+        debouncedSection < 2
+      ) {
+        setSection(debouncedSection + 1)
+      }
+    },
+    window || Element
+  )
 
   useEffect(() => {
     switch (debouncedSection) {
