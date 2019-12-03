@@ -25,7 +25,11 @@ function WebsiteSection(props) {
           >
             <img
               src="https://myportfoliositeimages.s3-us-west-1.amazonaws.com/tctech_site_1.png"
-              style={{ maxHeight: "5em", maxWidth: "9em" }}
+              style={{
+                maxHeight: "5.1em",
+                maxWidth: "9.1em",
+                verticalAlign: "bottom",
+              }}
             />
           </a>
         </ImageContainer>
@@ -44,7 +48,11 @@ function WebsiteSection(props) {
           >
             <img
               src="https://myportfoliositeimages.s3-us-west-1.amazonaws.com/battlerounds_site_1.png"
-              style={{ maxHeight: "5em", maxWidth: "9em" }}
+              style={{
+                maxHeight: "5.1em",
+                maxWidth: "9.1em",
+                verticalAlign: "bottom",
+              }}
             />
           </a>
         </ImageContainer>
