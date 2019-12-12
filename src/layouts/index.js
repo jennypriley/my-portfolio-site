@@ -3,7 +3,8 @@ import { createGlobalStyle } from "styled-components"
 import siteColors from "../styles/colors"
 
 const GlobalStyle = createGlobalStyle`
-  body {
+
+body {
     margin: 0;
     background-color: ${siteColors.black};
     color: ${siteColors.white};

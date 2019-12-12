@@ -9,7 +9,7 @@ import Row from "../../common/Row"
 
 function WebsiteSection(props) {
   return (
-    <SectionHeight>
+    <div>
       <SectionHeader>Websites</SectionHeader>
       <SubsectionHeader>TikiCyborg Technical, LLC.</SubsectionHeader>
       <WebsiteDescription>
@@ -25,6 +25,7 @@ function WebsiteSection(props) {
           >
             <img
               src="https://myportfoliositeimages.s3-us-west-1.amazonaws.com/tctech_site_1.png"
+              alt=" "
               style={{
                 maxHeight: "5.1em",
                 maxWidth: "9.1em",
@@ -48,6 +49,7 @@ function WebsiteSection(props) {
           >
             <img
               src="https://myportfoliositeimages.s3-us-west-1.amazonaws.com/battlerounds_site_1.png"
+              alt=" "
               style={{
                 maxHeight: "5.1em",
                 maxWidth: "9.1em",
@@ -57,17 +59,15 @@ function WebsiteSection(props) {
           </a>
         </ImageContainer>
       </Row>
-    </SectionHeight>
+    </div>
   )
 }
 
-const SectionHeight = styled.div`
-  height: 100vh;
-  margin-top: 3em;
-`
-
 const WebsiteDescription = styled(Description)`
   margin-top: 0em;
+  @media only screen and (max-device-width: 800px) {
+    margin: 0em 2em 2em 2em;
+  }
 `
 
 export default WebsiteSection

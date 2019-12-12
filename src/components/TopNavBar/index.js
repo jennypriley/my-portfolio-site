@@ -2,9 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import TopNavLinks from "./TopNavLinks"
 import siteColors from "../../styles/colors"
-import GithubIcon from "../../styles/svg/GithubIcon"
-import LinkedinIcon from "../../styles/svg/LinkedinIcon"
-import DribbbleIcon from "../../styles/svg/DribbbleIcon"
+import SocialRow from "../common/Button/SocialRow"
 
 function TopNavBar(props) {
   return (
@@ -30,35 +28,11 @@ function TopNavBar(props) {
             interactionColor={siteColors.green}
           />
         </TopNavLinkHoverColors>
-        <SocialIcons>
-          <SocialButton>
-            <a
-              href="https://github.com/jennypriley"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <GithubIcon />
-            </a>
-          </SocialButton>
-          <SocialButton>
-            <a
-              href="https://linkedin.com/in/jril/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <LinkedinIcon />
-            </a>
-          </SocialButton>
-          <SocialButton>
-            <a
-              href="https://dribbble.com/jennril"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <DribbbleIcon />
-            </a>
-          </SocialButton>
-        </SocialIcons>
+        <MobileHide>
+          <SocialSpacing>
+            <SocialRow extraSvgId="topnavbar" />
+          </SocialSpacing>
+        </MobileHide>
       </TopNavBoundaries>
       <TopNavBottomBorder />
     </StickyNav>
@@ -79,6 +53,9 @@ const TopNavBoundaries = styled.div`
   width: -webkit-fill-available;
   padding: 0.5em 0 0.5em;
   align-items: center;
+  @media only screen and (max-device-width: 800px) {
+    margin: 0em 10em 0em 2em;
+  }
 `
 
 const TopNavBottomBorder = styled.div`
@@ -100,7 +77,7 @@ const TopNavLinkHoverColors = styled.div`
   }
 `
 
-const SocialIcons = styled.div`
+const SocialSpacing = styled.div`
   margin-left: auto;
   display: flex;
   div:last-child {
@@ -108,21 +85,10 @@ const SocialIcons = styled.div`
     margin-right: 0;
   }
 `
-const SocialButton = styled.div`
-  margin-right: 2em;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  &:hover {
-    cursor: pointer;
-    opacity: 0.75;
-    -o-transition: 0.2s;
-    -ms-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
+
+const MobileHide = styled.div`
+  @media only screen and (max-device-width: 800px) {
+    display: none;
   }
 `
 

@@ -7,6 +7,7 @@ import SectionHeader from "../components/common/SectionHeader"
 import Description from "../components/common/Description"
 import Button from "../components/common/Button"
 import Envelope from "../styles/svg/Envelope"
+import SocialRow from "../components/common/Button/SocialRow"
 
 const Contacts = ({ path }) => (
   <div>
@@ -24,6 +25,11 @@ const Contacts = ({ path }) => (
     <ContactDescription>
       Have any questions or a job opportunity you would like to discuss?
     </ContactDescription>
+    <MobileHide>
+      <SocialSpacing>
+        <SocialRow extraSvgId="contact" />
+      </SocialSpacing>
+    </MobileHide>
     <br />
     <Button
       onClick={() => window.location.assign("mailto:jenny.p.riley@gmail.com")}
@@ -43,12 +49,26 @@ const EnvelopePositioning = styled.div`
 `
 
 const ContactHeader = styled(SectionHeader)`
-  margin-top: 3em;
   border-color: ${orange};
 `
 
 const ContactDescription = styled(Description)`
   margin-top: 0em;
+`
+
+const SocialSpacing = styled.div`
+  margin-left: 0em;
+  display: flex;
+  div:last-child {
+    padding-right: 0;
+    margin-right: 0;
+  }
+`
+
+const MobileHide = styled.div`
+  @media only screen and (min-device-width: 801px) {
+    display: none;
+  }
 `
 
 export default Contacts

@@ -9,7 +9,7 @@ import DownArrow from "../../../styles/svg/DownArrow"
 
 function LandingSection() {
   return (
-    <SectionHeight>
+    <div>
       <SilhouettePositioning>
         <PageSilhouette
           style={{
@@ -44,13 +44,9 @@ function LandingSection() {
           identities to life. And, yes, I <i>do</i> code!
         </BlurbPart>
       </Description>
-    </SectionHeight>
+    </div>
   )
 }
-
-const SectionHeight = styled.div`
-  height: 100vh;
-`
 
 const BlurbPart = styled.div`
   display: block;
@@ -64,6 +60,9 @@ const SilhouettePositioning = styled.div`
   left: 0;
   right: 0;
   z-index: -100;
+  @media only screen and (max-device-width: 800px) {
+    display: none;
+  }
 `
 
 const ScrollText = styled.div`
@@ -73,6 +72,9 @@ const ScrollText = styled.div`
   margin-left: 10em;
   padding-bottom: 1em;
   color: ${white};
+  @media only screen and (max-device-width: 800px) {
+    margin: 3em 2em 2em 2em;
+  }
 `
 
 const DownArrowPositioning = styled.div`
@@ -81,6 +83,9 @@ const DownArrowPositioning = styled.div`
   left: 0;
   right: 0;
   z-index: 0;
+  @media only screen and (max-device-width: 800px) {
+    display: none;
+  }
 `
 
 const DownArrowAnimationKeyframes = keyframes`

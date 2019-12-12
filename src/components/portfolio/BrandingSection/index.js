@@ -8,7 +8,7 @@ import Row from "../../common/Row"
 
 function BrandingSection() {
   return (
-    <SectionHeight>
+    <SectionMargin>
       <SectionHeader>Illustrations / Branding</SectionHeader>
       <SubsectionHeader>Professional Work</SubsectionHeader>
       <BrandingDescription>
@@ -23,6 +23,7 @@ function BrandingSection() {
           >
             <img
               src="https://myportfoliositeimages.s3-us-west-1.amazonaws.com/affinityhomes.png"
+              alt=" "
               style={{
                 maxHeight: "5.1em",
                 maxWidth: "9.1em",
@@ -39,6 +40,7 @@ function BrandingSection() {
           >
             <img
               src="https://myportfoliositeimages.s3-us-west-1.amazonaws.com/pompacorglogo.png"
+              alt=" "
               style={{
                 maxHeight: "5.1em",
                 maxWidth: "9.1em",
@@ -61,6 +63,7 @@ function BrandingSection() {
           >
             <img
               src="https://myportfoliositeimages.s3-us-west-1.amazonaws.com/recipeapplogin.png"
+              alt=" "
               style={{
                 maxHeight: "5.1em",
                 maxWidth: "9.1em",
@@ -77,6 +80,7 @@ function BrandingSection() {
           >
             <img
               src="https://myportfoliositeimages.s3-us-west-1.amazonaws.com/nightsky404.png"
+              alt=" "
               style={{
                 maxHeight: "5.1em",
                 maxWidth: "9.1em",
@@ -86,17 +90,19 @@ function BrandingSection() {
           </a>
         </ImageContainer>
       </Row>
-    </SectionHeight>
+    </SectionMargin>
   )
 }
 
-const SectionHeight = styled.div`
-  height: 100vh;
+const SectionMargin = styled.div`
   margin-top: 3em;
 `
 
 const BrandingDescription = styled(Description)`
   margin-top: 0em;
+  @media only screen and (max-device-width: 800px) {
+    margin: 0em 2em 2em 2em;
+  }
 `
 
 export default BrandingSection

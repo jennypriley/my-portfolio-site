@@ -7,6 +7,9 @@ import Row from "../components/common/Row"
 import SectionHeader from "../components/common/SectionHeader"
 import Description from "../components/common/Description"
 import PaintBrush from "../styles/svg/PaintBrush"
+// import GithubIcon from "../styles/svg/GithubIcon"
+// import LinkedinIcon from "../styles/svg/LinkedinIcon"
+// import DribbbleIcon from "../styles/svg/DribbbleIcon"
 
 const About = ({ path }) => (
   <div>
@@ -26,6 +29,7 @@ const About = ({ path }) => (
         <img
           src="https://myportfoliositeimages.s3-us-west-1.amazonaws.com/headshot.png"
           style={{ height: "18.1em", width: "12.1em", verticalAlign: "bottom" }}
+          alt=" "
         />
       </PhotoContainer>
       <Column>
@@ -57,7 +61,6 @@ const PaintBrushPositioning = styled.div`
 `
 
 const AboutHeader = styled(SectionHeader)`
-  margin-top: 3em;
   border-color: ${green};
 `
 
