@@ -54,19 +54,20 @@ const ContactHeader = styled(SectionHeader)`
 
 const ContactDescription = styled(Description)`
   margin-top: 0em;
+  @media only screen and (max-device-width: 979px) {
+    margin-top: 0em;
+  }
 `
 
 const SocialSpacing = styled.div`
-  margin-left: 0em;
-  display: flex;
-  div:last-child {
-    padding-right: 0;
-    margin-right: 0;
+  margin-left: 10em;
+  @media only screen and (max-device-width: 979px) {
+    margin-left: 2em;
   }
 `
 
 const MobileHide = styled.div`
-  @media only screen and (min-device-width: 801px) {
+  @media only screen and (min-device-width: 980px) {
     display: none;
   }
 `

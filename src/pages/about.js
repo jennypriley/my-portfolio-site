@@ -7,9 +7,6 @@ import Row from "../components/common/Row"
 import SectionHeader from "../components/common/SectionHeader"
 import Description from "../components/common/Description"
 import PaintBrush from "../styles/svg/PaintBrush"
-// import GithubIcon from "../styles/svg/GithubIcon"
-// import LinkedinIcon from "../styles/svg/LinkedinIcon"
-// import DribbbleIcon from "../styles/svg/DribbbleIcon"
 
 const About = ({ path }) => (
   <div>
@@ -75,8 +72,7 @@ const PhotoContainer = styled.div`
 
 const BlurbPart = styled.div`
   display: block;
-  margin-block-start: 0.1em;
-  margin-block-end: 1em;
+  margin-bottom: 1em;
 `
 
 const Column = styled(Row)`
@@ -87,6 +83,9 @@ const Column = styled(Row)`
 const AboutDescription = styled(Description)`
   margin-top: -0.5em;
   margin-left: 0em;
+  @media only screen and (max-device-width: 979px) {
+    margin-top: 0em;
+  }
 `
 
 export default About

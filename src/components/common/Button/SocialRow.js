@@ -7,7 +7,7 @@ import DribbbleIcon from "../../../styles/svg/DribbbleIcon"
 
 function SocialRow({ extraSvgId }) {
   return (
-    <SocialSpacing>
+    <div>
       <SocialButton>
         <a
           href="https://github.com/jennypriley"
@@ -35,11 +35,12 @@ function SocialRow({ extraSvgId }) {
           <DribbbleIcon extraSvgId={extraSvgId} />
         </a>
       </SocialButton>
-    </SocialSpacing>
+    </div>
   )
 }
 
 const SocialButton = styled.div`
+  display: inline-flex;
   margin-right: 2em;
   -webkit-user-select: none;
   -moz-user-select: none;

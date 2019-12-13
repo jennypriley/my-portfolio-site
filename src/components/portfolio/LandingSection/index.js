@@ -60,7 +60,7 @@ const SilhouettePositioning = styled.div`
   left: 0;
   right: 0;
   z-index: -100;
-  @media only screen and (max-device-width: 800px) {
+  @media only screen and (max-device-width: 979px) {
     display: none;
   }
 `
@@ -72,7 +72,7 @@ const ScrollText = styled.div`
   margin-left: 10em;
   padding-bottom: 1em;
   color: ${white};
-  @media only screen and (max-device-width: 800px) {
+  @media only screen and (max-device-width: 979px) {
     margin: 3em 2em 2em 2em;
   }
 `
@@ -83,7 +83,7 @@ const DownArrowPositioning = styled.div`
   left: 0;
   right: 0;
   z-index: 0;
-  @media only screen and (max-device-width: 800px) {
+  @media only screen and (max-device-width: 979px) {
     display: none;
   }
 `

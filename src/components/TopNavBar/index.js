@@ -29,9 +29,7 @@ function TopNavBar(props) {
           />
         </TopNavLinkHoverColors>
         <MobileHide>
-          <SocialSpacing>
-            <SocialRow extraSvgId="topnavbar" />
-          </SocialSpacing>
+          <SocialRow extraSvgId="topnavbar" />
         </MobileHide>
       </TopNavBoundaries>
       <TopNavBottomBorder />
@@ -53,8 +51,8 @@ const TopNavBoundaries = styled.div`
   width: -webkit-fill-available;
   padding: 0.5em 0 0.5em;
   align-items: center;
-  @media only screen and (max-device-width: 800px) {
-    margin: 0em 10em 0em 2em;
+  @media only screen and (max-device-width: 979px) {
+    margin: 0em 2em 0em 2em;
   }
 `
 
@@ -77,17 +75,13 @@ const TopNavLinkHoverColors = styled.div`
   }
 `
 
-const SocialSpacing = styled.div`
+const MobileHide = styled.div`
   margin-left: auto;
-  display: flex;
   div:last-child {
     padding-right: 0;
     margin-right: 0;
   }
-`
-
-const MobileHide = styled.div`
-  @media only screen and (max-device-width: 800px) {
+  @media only screen and (max-device-width: 979px) {
     display: none;
   }
 `
