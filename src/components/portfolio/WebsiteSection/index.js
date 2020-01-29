@@ -65,7 +65,7 @@ function WebsiteSection(props) {
 
 const WebsiteDescription = styled(Description)`
   margin-top: 0em;
-  @media only screen and (max-device-width: 979px) {
+  @media only screen and (max-device-width: 1024px) {
     margin: 0em 2em 2em 2em;
   }
 `

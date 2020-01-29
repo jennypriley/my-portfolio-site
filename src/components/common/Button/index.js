@@ -34,7 +34,7 @@ export default styled(Button)`
     -webkit-transition: 0.2s;
     transition: 0.2s;
   }
-  @media only screen and (max-device-width: 979px) {
+  @media only screen and (max-device-width: 1024px) {
     margin-left: 1em;
   }
 `

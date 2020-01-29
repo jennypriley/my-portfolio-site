@@ -5,41 +5,35 @@ import GithubIcon from "../../../styles/svg/GithubIcon"
 import LinkedinIcon from "../../../styles/svg/LinkedinIcon"
 import DribbbleIcon from "../../../styles/svg/DribbbleIcon"
 
-function SocialRow({ extraSvgId }) {
+function SocialRow() {
   return (
     <div>
-      <SocialButton>
-        <a
-          href="https://github.com/jennypriley"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GithubIcon extraSvgId={extraSvgId} />
-        </a>
+      <SocialButton
+        href="https://github.com/jennypriley"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <GithubIcon />
       </SocialButton>
-      <SocialButton>
-        <a
-          href="https://linkedin.com/in/jril/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <LinkedinIcon extraSvgId={extraSvgId} />
-        </a>
+      <SocialButton
+        href="https://linkedin.com/in/jril/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <LinkedinIcon />
       </SocialButton>
-      <SocialButton>
-        <a
-          href="https://dribbble.com/jennril"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <DribbbleIcon extraSvgId={extraSvgId} />
-        </a>
+      <SocialButton
+        href="https://dribbble.com/jennril"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <DribbbleIcon />
       </SocialButton>
     </div>
   )
 }
 
-const SocialButton = styled.div`
+const SocialButton = styled.a`
   display: inline-flex;
   margin-right: 2em;
   -webkit-user-select: none;

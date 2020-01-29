@@ -100,7 +100,7 @@ const SectionMargin = styled.div`
 
 const BrandingDescription = styled(Description)`
   margin-top: 0em;
-  @media only screen and (max-device-width: 979px) {
+  @media only screen and (max-device-width: 1024px) {
     margin: 0em 2em 2em 2em;
   }
 `

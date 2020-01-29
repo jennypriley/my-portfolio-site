@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
+
 import TopNavLinks from "./TopNavLinks"
 import siteColors from "../../styles/colors"
-import SocialRow from "../common/Button/SocialRow"
 
 function TopNavBar(props) {
   return (
@@ -28,9 +28,6 @@ function TopNavBar(props) {
             interactionColor={siteColors.green}
           />
         </TopNavLinkHoverColors>
-        <MobileHide>
-          <SocialRow extraSvgId="topnavbar" />
-        </MobileHide>
       </TopNavBoundaries>
       <TopNavBottomBorder />
     </StickyNav>
@@ -43,6 +40,7 @@ const StickyNav = styled.div`
   background-color: ${siteColors.black};
   top: 0;
   z-index: 100;
+  width: 100%;
 `
 
 const TopNavBoundaries = styled.div`
@@ -51,7 +49,7 @@ const TopNavBoundaries = styled.div`
   width: -webkit-fill-available;
   padding: 0.5em 0 0.5em;
   align-items: center;
-  @media only screen and (max-device-width: 979px) {
+  @media only screen and (max-device-width: 1024px) {
     margin: 0em 2em 0em 2em;
   }
 `
@@ -72,17 +70,6 @@ const TopNavLinkHoverColors = styled.div`
   }
   div:nth-child(3) {
     color: ${siteColors.green};
-  }
-`
-
-const MobileHide = styled.div`
-  margin-left: auto;
-  div:last-child {
-    padding-right: 0;
-    margin-right: 0;
-  }
-  @media only screen and (max-device-width: 979px) {
-    display: none;
   }
 `
 

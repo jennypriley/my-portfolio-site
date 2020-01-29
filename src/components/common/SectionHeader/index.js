@@ -10,7 +10,7 @@ export default styled.div`
   margin: 3em 10em 2em 10em;
   color: ${white};
   border-bottom: solid 0.1em ${violet};
-  @media only screen and (max-device-width: 979px) {
+  @media only screen and (max-device-width: 1024px) {
     margin: 3em 2em 2em 2em;
   }
 `

@@ -11,24 +11,32 @@ import PaintBrush from "../styles/svg/PaintBrush"
 const About = ({ path }) => (
   <div>
     <TopNavBar pathName={path} />
-    <PaintBrushPositioning>
-      <PaintBrush
-        style={{
-          height: "80vh",
-          display: "flex",
-          margin: "11.5em 10em 0em auto",
-        }}
-      />
-    </PaintBrushPositioning>
+    <MobileHide>
+      <PaintBrushPositioning>
+        <PaintBrush
+          style={{
+            height: "80vh",
+            display: "flex",
+            margin: "11.5em 10em 0em auto",
+          }}
+        />
+      </PaintBrushPositioning>
+    </MobileHide>
     <AboutHeader>About</AboutHeader>
     <Row>
-      <PhotoContainer>
-        <img
-          src="https://myportfoliositeimages.s3-us-west-1.amazonaws.com/headshot.png"
-          style={{ height: "18.1em", width: "12.1em", verticalAlign: "bottom" }}
-          alt=" "
-        />
-      </PhotoContainer>
+      <MobileHide>
+        <PhotoContainer>
+          <img
+            src="https://myportfoliositeimages.s3-us-west-1.amazonaws.com/headshot.png"
+            style={{
+              height: "18.1em",
+              width: "12.1em",
+              verticalAlign: "bottom",
+            }}
+            alt=" "
+          />
+        </PhotoContainer>
+      </MobileHide>
       <Column>
         <AboutDescription>
           <BlurbPart>
@@ -83,8 +91,15 @@ const Column = styled(Row)`
 const AboutDescription = styled(Description)`
   margin-top: -0.5em;
   margin-left: 0em;
-  @media only screen and (max-device-width: 979px) {
+  @media only screen and (max-device-width: 1024px) {
     margin-top: 0em;
+    margin-left: 1.65em;
+  }
+`
+
+const MobileHide = styled.div`
+  @media only screen and (max-device-width: 1024px) {
+    display: none;
   }
 `
 

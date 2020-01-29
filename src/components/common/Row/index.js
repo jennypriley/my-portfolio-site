@@ -5,7 +5,7 @@ export default styled.div`
   flex-direction: row;
   align-items: flex-start;
   margin-left: 8em;
-  @media only screen and (max-device-width: 979px) {
+  @media only screen and (max-device-width: 1024px) {
     margin-left: 0.25em;
   }
 `
