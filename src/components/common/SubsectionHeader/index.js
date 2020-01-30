@@ -8,4 +8,7 @@ export default styled.div`
   margin: 0em 10em 1em 10em;
   width: -webkit-fill-available;
   color: ${white};
+  @media only screen and (max-device-width: 1024px) {
+    margin: 0em 2em 2em 2em;
+  }
 `

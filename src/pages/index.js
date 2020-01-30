@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import styled from "styled-components"
 import Scroll from "react-scroll"
 
 import useEventListender from "../util/useEventListener"
@@ -71,14 +72,24 @@ function Landing({ path }) {
   return (
     <div>
       <TopNavBar pathName={path} />
-      <Element name="Landing" />
-      <LandingSection />
-      <Element name="Website" />
-      <WebsiteSection />
-      <Element name="Branding" />
-      <BrandingSection />
+      <SectionHeight>
+        <Element name="Landing" />
+        <LandingSection />
+      </SectionHeight>
+      <SectionHeight>
+        <Element name="Website" />
+        <WebsiteSection />
+      </SectionHeight>
+      <SectionHeight>
+        <Element name="Branding" />
+        <BrandingSection />
+      </SectionHeight>
     </div>
   )
 }
+
+const SectionHeight = styled.div`
+  height: 100vh;
+`
 
 export default Landing

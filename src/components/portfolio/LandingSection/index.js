@@ -5,31 +5,28 @@ import { white } from "../../../styles/colors"
 import Description from "../../common/Description"
 import WaveIcon from "../../../styles/svg/WaveIcon"
 import PageSilhouette from "../../../styles/svg/PageSilhouette"
-import DownArrow from "../../../styles/svg/DownArrow"
 
 function LandingSection() {
   return (
-    <SectionHeight>
+    <div>
       <SilhouettePositioning>
         <PageSilhouette
           style={{
-            height: "75vh",
-            display: "flex",
-            margin: "8.5em 10em 5em auto",
+            height: "70vh",
+            float: "right",
+            position: "relative",
+            top: "10em",
+            right: "3em",
           }}
         />
       </SilhouettePositioning>
       <DownArrowPositioning>
-        <ScrollText>Scroll down!</ScrollText>
-        <DownArrowAnimation>
-          <DownArrow
-            style={{
-              height: "5vh",
-              display: "flex",
-              margin: "auto auto 1em 11.25em",
-            }}
-          />
-        </DownArrowAnimation>
+        <ScrollText>
+          Scroll down!
+          <DownArrowAnimation>
+            <DownArrow className="-long" />
+          </DownArrowAnimation>
+        </ScrollText>
       </DownArrowPositioning>
       <Description>
         <WaveLine>
@@ -44,13 +41,9 @@ function LandingSection() {
           identities to life. And, yes, I <i>do</i> code!
         </BlurbPart>
       </Description>
-    </SectionHeight>
+    </div>
   )
 }
-
-const SectionHeight = styled.div`
-  height: 100vh;
-`
 
 const BlurbPart = styled.div`
   display: block;
@@ -64,6 +57,9 @@ const SilhouettePositioning = styled.div`
   left: 0;
   right: 0;
   z-index: -100;
+  @media only screen and (max-device-width: 1024px) {
+    display: none;
+  }
 `
 
 const ScrollText = styled.div`
@@ -73,6 +69,9 @@ const ScrollText = styled.div`
   margin-left: 10em;
   padding-bottom: 1em;
   color: ${white};
+  @media only screen and (max-device-width: 1024px) {
+    margin: 3em 2em 0em 2em;
+  }
 `
 
 const DownArrowPositioning = styled.div`
@@ -83,19 +82,68 @@ const DownArrowPositioning = styled.div`
   z-index: 0;
 `
 
+const DownArrow = styled.div`
+  width: 12px;
+  height: 10px;
+  border: none;
+  background: none;
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    top: 2px;
+    right: 6px;
+    width: 8px;
+    height: 8px;
+    content: "";
+    position: absolute;
+    transform: rotate(45deg);
+    box-shadow: 2px 2px 0 ${white}, 3px 2px 0 ${white}, 2px 3px 0 ${white},
+      3px 3px 0 ${white};
+    @media only screen and (max-device-width: 1024px) {
+      margin-left: 2em;
+    }
+  }
+  &::after {
+    width: 0;
+    height: 0;
+    left: -1px;
+    bottom: 50%;
+    content: "⁃";
+    color: $color;
+    line-height: 0;
+    font-size: 12px;
+    position: absolute;
+  }
+
+  &.-long {
+    width: 22.4px;
+    &::after {
+      left: 0;
+      content: "⁃⁃⁃";
+      transform: rotate(90deg);
+      margin-left: 0px;
+      padding-bottom: 25px;
+    }
+  }
+`
+
 const DownArrowAnimationKeyframes = keyframes`
 0%, 20%, 50%, 80%, 100% {
   transform: translateY(0);
 }
 40% {
-  transform: translateY(-20px);
+  transform: translateY(-12px);
 }
 60% {
-  transform: translateY(-15px);
+  transform: translateY(-8px);
 }
 `
 
 const DownArrowAnimation = styled.div`
+  width: fit-content;
+  margin-top: 0.5em;
+  margin-left: 1.75em;
   &:hover {
     animation-name: ${DownArrowAnimationKeyframes};
     animation-duration: 2s;
