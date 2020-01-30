@@ -19,7 +19,7 @@ export default styled(Button)`
   font-family: Lato;
   font-weight: 500;
   font-size: 1.5em;
-  margin: 1rem 10rem;
+  margin-left: 10rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -33,5 +33,8 @@ export default styled(Button)`
     -moz-transition: 0.2s;
     -webkit-transition: 0.2s;
     transition: 0.2s;
+  }
+  @media only screen and (max-device-width: 1024px) {
+    margin-left: 1em;
   }
 `
