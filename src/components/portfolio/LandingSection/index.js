@@ -60,6 +60,9 @@ const SilhouettePositioning = styled.div`
   @media only screen and (max-device-width: 1024px) {
     display: none;
   }
+  @media only screen and (max-device-height: 600px) {
+    display: none;
+  }
 `
 
 const ScrollText = styled.div`
