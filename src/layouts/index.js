@@ -1,6 +1,8 @@
 import React from "react"
-import { createGlobalStyle } from "styled-components"
+import styled, { createGlobalStyle } from "styled-components"
+
 import siteColors from "../styles/colors"
+import ParticleBackground from "../components/ParticleBackground"
 
 const GlobalStyle = createGlobalStyle`
 
@@ -28,10 +30,22 @@ body {
     color: ${siteColors.white}
   }
 `
+const SetBg = styled.div`
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  left: 0;
+`
+
 export default ({ children }) => {
   return (
     <React.Fragment>
       <GlobalStyle />
+      <SetBg>
+        <ParticleBackground />
+      </SetBg>
       {children}
     </React.Fragment>
   )
