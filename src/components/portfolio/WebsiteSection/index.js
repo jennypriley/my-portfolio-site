@@ -18,7 +18,7 @@ function WebsiteSection(props) {
       <Row>
         <ImageContainer>
           <a
-            href="https://github.com/jennypriley/tiki-cyborg-technical"
+            href="https://jennysmocks.invisionapp.com/public/share/HJWUCBD9Q"
             target="_blank"
             rel="noopener noreferrer"
           >
