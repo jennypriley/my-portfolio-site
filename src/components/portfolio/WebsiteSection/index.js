@@ -13,13 +13,12 @@ function WebsiteSection(props) {
       <SectionHeader>Websites</SectionHeader>
       <SubsectionHeader>TikiCyborg Technical, LLC.</SubsectionHeader>
       <WebsiteDescription>
-        TikiCyborg Technical, LLC. is a small, Seattle-based company dedicated
-        to helping other businesses with their IT needs.
+        TikiCyborg Technical, LLC. helps other businesses with their IT needs.
       </WebsiteDescription>
       <Row>
         <ImageContainer>
           <a
-            href="https://jennysmocks.invisionapp.com/public/share/HJWUCBD9Q"
+            href="https://github.com/jennypriley/tiki-cyborg-technical"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -37,8 +36,7 @@ function WebsiteSection(props) {
       </Row>
       <SubsectionHeader>Battlerounds</SubsectionHeader>
       <WebsiteDescription>
-        Battlerounds is a Warhammer 40K tournament tracking site. It allows
-        players to keep track of events, statistics, and tournament matches.
+        Battlerounds is a Warhammer 40K tournament tracking site.
       </WebsiteDescription>
       <Row>
         <ImageContainer>
