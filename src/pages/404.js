@@ -10,48 +10,44 @@ import Button from "../components/common/Button"
 function NotFound() {
   return (
     <div>
-      <div>
-        <Row>
+      <Row>
+        <Web
+          id="LeftWeb"
+          style={{
+            height: "18vw",
+            display: "flex",
+          }}
+        />
+        <Column>
+          <Thread />
+          <SpiderPositioning>
+            <Spider
+              style={{
+                height: "10vh",
+                display: "flex",
+              }}
+            />
+          </SpiderPositioning>
+        </Column>
+        <RightWebPositioning>
           <Web
-            id="LeftWeb"
+            id="RightWeb"
             style={{
               height: "18vw",
               display: "flex",
             }}
           />
-          <Column>
-            <Thread />
-            <SpiderPositioning>
-              <Spider
-                style={{
-                  height: "10vh",
-                  display: "flex",
-                }}
-              />
-            </SpiderPositioning>
-          </Column>
-          <RightWebPositioning>
-            <Web
-              id="RightWeb"
-              style={{
-                height: "18vw",
-                display: "flex",
-              }}
-            />
-          </RightWebPositioning>
-        </Row>
-      </div>
-      <div>
-        <NotFoundTextPositioning>
-          <NotFoundHeader>404</NotFoundHeader>
-          <NotFoundDescription>Not Found</NotFoundDescription>
-        </NotFoundTextPositioning>
-        <ButtonPositioning>
-          <Link>
-            <Button to="/">Return</Button>
-          </Link>
-        </ButtonPositioning>
-      </div>
+        </RightWebPositioning>
+      </Row>
+      <NotFoundTextPositioning>
+        <NotFoundHeader>404</NotFoundHeader>
+        <NotFoundDescription>Not Found</NotFoundDescription>
+      </NotFoundTextPositioning>
+      <ButtonPositioning>
+        <Link>
+          <Button to="/">Return</Button>
+        </Link>
+      </ButtonPositioning>
     </div>
   )
 }
