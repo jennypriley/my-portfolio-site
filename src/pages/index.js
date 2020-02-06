@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import Scroll from "react-scroll"
+import { Swipeable } from "react-swipeable"
 
 import useEventListender from "../util/useEventListener"
 import useDebounce from "../util/useDebounce"
@@ -70,7 +71,18 @@ function Landing({ path }) {
     }
   }, [debouncedSection])
   return (
-    <div>
+    <Swipeable
+      onSwipedDown={e => {
+        if (debouncedSection > 0) {
+          setSection(debouncedSection - 1)
+        }
+      }}
+      onSwipedUp={e => {
+        if (debouncedSection < 2) {
+          setSection(debouncedSection + 1)
+        }
+      }}
+    >
       <TopNavBar pathName={path} />
       <SectionHeight>
         <Element name="Landing" />
@@ -84,7 +96,7 @@ function Landing({ path }) {
         <Element name="Branding" />
         <BrandingSection />
       </SectionHeight>
-    </div>
+    </Swipeable>
   )
 }
 
