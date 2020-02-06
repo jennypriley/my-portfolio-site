@@ -12,10 +12,10 @@ function LandingSection() {
       <SilhouettePositioning>
         <PageSilhouette
           style={{
-            height: "70vh",
+            height: "60vh",
             float: "right",
             position: "relative",
-            top: "10em",
+            top: "15em",
             right: "3em",
           }}
         />
@@ -54,10 +54,13 @@ const SilhouettePositioning = styled.div`
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
   right: 0;
+  margin-right: 10em;
   z-index: -100;
   @media only screen and (max-device-width: 1024px) {
+    display: none;
+  }
+  @media only screen and (max-device-height: 600px) {
     display: none;
   }
 `

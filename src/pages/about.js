@@ -6,25 +6,25 @@ import TopNavBar from "../components/TopNavBar"
 import Row from "../components/common/Row"
 import SectionHeader from "../components/common/SectionHeader"
 import Description from "../components/common/Description"
-import PaintBrush from "../styles/svg/PaintBrush"
+import Cats from "../styles/svg/Cats"
 
 const About = ({ path }) => (
   <div>
     <TopNavBar pathName={path} />
     <MobileHide>
-      <PaintBrushPositioning>
-        <PaintBrush
+      <CatsPositioning>
+        <Cats
           style={{
-            height: "80vh",
+            height: "40vh",
             display: "flex",
             margin: "11.5em 10em 0em auto",
           }}
         />
-      </PaintBrushPositioning>
+      </CatsPositioning>
     </MobileHide>
     <AboutHeader>About</AboutHeader>
     <Row>
-      <MobileHide>
+      <SmallMobileHide>
         <PhotoContainer>
           <img
             src="https://myportfoliositeimages.s3-us-west-1.amazonaws.com/headshot.png"
@@ -36,31 +36,22 @@ const About = ({ path }) => (
             alt=" "
           />
         </PhotoContainer>
-      </MobileHide>
+      </SmallMobileHide>
       <Column>
         <AboutDescription>
-          <BlurbPart>
-            I am a humor-loving gamer with a background in the arts. In my spare
-            time, I love to play video games, draw, paint miniatures, or dabble
-            in creative hobbies. I'm also an animal lover and like to spend time
-            snuggling and playing with my two cats.
-          </BlurbPart>
-          <BlurbPart>
-            When I'm not at home, I'm usually hanging out with my boyfriend and
-            friends or out enjoying nature while hiking or at a whildlife
-            preserve.
-          </BlurbPart>
+          I am a humor-loving gamer with a background in the arts. In my spare
+          time, I love to play video games, draw, hike, paint miniatures, or
+          dabble in new creative hobbies. I'm also an animal lover and like to
+          spend time snuggling and playing with my two cats.
         </AboutDescription>
       </Column>
     </Row>
   </div>
 )
 
-const PaintBrushPositioning = styled.div`
+const CatsPositioning = styled.div`
   position: absolute;
-  top: 0;
   bottom: 0;
-  left: 0;
   right: 0;
   z-index: -100;
 `
@@ -78,27 +69,31 @@ const PhotoContainer = styled.div`
   margin: 0em 0em 3em 2em;
 `
 
-const BlurbPart = styled.div`
-  display: block;
-  margin-bottom: 1em;
-`
-
 const Column = styled(Row)`
   flex-direction: column;
   margin-left: 2em;
 `
 
 const AboutDescription = styled(Description)`
-  margin-top: -0.5em;
+  margin-top: -0.25em;
   margin-left: 0em;
   @media only screen and (max-device-width: 1024px) {
-    margin-top: 0em;
+    margin-top: 0.25em;
     margin-left: 1.65em;
   }
 `
 
 const MobileHide = styled.div`
   @media only screen and (max-device-width: 1024px) {
+    display: none;
+  }
+  @media only screen and (max-device-height: 600px) {
+    display: none;
+  }
+`
+
+const SmallMobileHide = styled.div`
+  @media only screen and (max-device-width: 500px) {
     display: none;
   }
 `

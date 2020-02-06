@@ -12,7 +12,7 @@ function BrandingSection() {
       <SectionHeader>Illustrations / Branding</SectionHeader>
       <SubsectionHeader>Professional Work</SubsectionHeader>
       <BrandingDescription>
-        These are illustrations and logos created for clients by request.
+        Illustrations and logos created for clients by request.
       </BrandingDescription>
       <Row>
         <ImageContainer>
@@ -52,7 +52,7 @@ function BrandingSection() {
       </Row>
       <SubsectionHeader>Miscellaneous</SubsectionHeader>
       <BrandingDescription>
-        These were created for practice or on personal mockup projects.
+        Created for practice or personal mockup projects.
       </BrandingDescription>
       <Row>
         <ImageContainer>

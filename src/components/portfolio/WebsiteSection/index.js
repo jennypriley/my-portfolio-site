@@ -13,8 +13,7 @@ function WebsiteSection(props) {
       <SectionHeader>Websites</SectionHeader>
       <SubsectionHeader>TikiCyborg Technical, LLC.</SubsectionHeader>
       <WebsiteDescription>
-        TikiCyborg Technical, LLC. is a small, Seattle-based company dedicated
-        to helping other businesses with their IT needs.
+        TikiCyborg Technical, LLC. helps other businesses with their IT needs.
       </WebsiteDescription>
       <Row>
         <ImageContainer>
@@ -37,8 +36,7 @@ function WebsiteSection(props) {
       </Row>
       <SubsectionHeader>Battlerounds</SubsectionHeader>
       <WebsiteDescription>
-        Battlerounds is a Warhammer 40K tournament tracking site. It allows
-        players to keep track of events, statistics, and tournament matches.
+        Battlerounds is a Warhammer 40K tournament tracking site.
       </WebsiteDescription>
       <Row>
         <ImageContainer>
