@@ -1,5 +1,6 @@
 import React from "react"
 import styled, { createGlobalStyle } from "styled-components"
+import { Helmet } from "react-helmet"
 
 import siteColors from "../styles/colors"
 import ParticleBackground from "../components/ParticleBackground"
@@ -46,6 +47,9 @@ export default ({ children }) => {
       <SetBg>
         <ParticleBackground />
       </SetBg>
+      <Helmet>
+        <title>Jenny's Design Portfolio</title>
+      </Helmet>
       {children}
     </React.Fragment>
   )
